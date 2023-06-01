@@ -55,6 +55,11 @@ app.use(express.json({ limit: '20mb' }));
 app.use(cookieParser());
 
 // basic api route
+ app.all('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next()
+  });
 app.get('/', (req, res) => {
    res.header("Access-Control-Allow-Origin"," *")
   res.status(200).json({
