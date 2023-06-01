@@ -50,12 +50,13 @@ process.on('uncaughtException', (err) => {
 connectToDb();
 
 // using middlewares
-app.use(
-  cors({
-   origin: [ /https://backend-production-0b02.up.railway.app$/],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//    origin: //backend-production-0b02.up.railway.app/api/admin/auth net::E,
+//     credentials: true,
+//   })
+// );
+app.use(cors());
 app.use(express.json({ limit: '20mb' }));
 app.use(cookieParser());
 
