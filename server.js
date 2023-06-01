@@ -47,7 +47,7 @@ connectToDb();
 // using middlewares
 app.use(
   cors({
-    origin: [/netlify\.app$/, /localhost:\d{4}$/],
+   origin: 'https://descriptive-accessible-arch.glitch.me/',
     credentials: true,
   })
 );
