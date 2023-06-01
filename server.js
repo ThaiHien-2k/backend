@@ -52,7 +52,7 @@ connectToDb();
 using middlewares
 app.use(
   cors({
-   origin: 'https://backend-production-0b02.up.railway.app/api/bloodStorages/',
+    origin: [/netlify\.app$/, /localhost:\d{4}$/],
     credentials: true,
   })
 );
