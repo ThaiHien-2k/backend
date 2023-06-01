@@ -52,7 +52,7 @@ connectToDb();
 // using middlewares
 app.use(
   cors({
-   origin: 'https://backend-production-0b02.up.railway.app',
+   origin: '/https://backend-production-0b02.up.railway.app$/',
     credentials: true,
   })
 );
