@@ -24,12 +24,7 @@ const adminRouter = require('./routes/adminRouter');
 const bloodDonateRouter = require('./routes/bloodDonateRouter');
 
 
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   next();
-// });
+
 // requiring middlewares
 const errorMiddleware = require('./middleware/Error');
 
@@ -49,14 +44,13 @@ process.on('uncaughtException', (err) => {
 // connect to db
 connectToDb();
 
-using middlewares
+// using middlewares
 app.use(
   cors({
     origin: [/netlify\.app$/, /localhost:\d{4}$/],
     credentials: true,
   })
 );
-// app.use(cors( credentials: true,));
 app.use(express.json({ limit: '20mb' }));
 app.use(cookieParser());
 
