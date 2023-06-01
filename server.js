@@ -56,6 +56,7 @@ app.use(cookieParser());
 
 // basic api route
 app.get('/', (req, res) => {
+   res.header("Access-Control-Allow-Origin"," *")
   res.status(200).json({
     success: true,
     message: 'API service running ',
