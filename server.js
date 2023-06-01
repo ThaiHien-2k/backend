@@ -56,7 +56,7 @@ connectToDb();
 //     credentials: true,
 //   })
 // );
-app.use(cors());
+app.use(cors( credentials: true,));
 app.use(express.json({ limit: '20mb' }));
 app.use(cookieParser());
 
