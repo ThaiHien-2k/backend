@@ -47,7 +47,7 @@ connectToDb();
 // using middlewares
 app.use(
   cors({
-   origin: 'https://descriptive-accessible-arch.glitch.me/',
+   origin: 'https://backend-production-0b02.up.railway.app',
     credentials: true,
   })
 );
